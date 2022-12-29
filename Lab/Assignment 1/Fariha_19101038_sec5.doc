@@ -1,0 +1,47 @@
+		Fariha Rahman	
+		ID- 19101038
+		CSE-321
+		Lab Assignment 1
+
+
+1.
+==> Create a file excalibur.txt in Desktop
+--> cat > excalibur.txt
+
+==> Change the permission of the file to owner: read, write and execute, group: read and execute and for other users execute only.
+-->
+ls -l excalibur.txt
+chmod 751 excalibur.txt
+ls -l excalibur.txt
+
+==> Create a directory named mydirectory
+--> mkdir mydirectory
+
+==> Copy the file excalibur.txt to mydirectory
+--> cp excalibur.txt mydirectory
+
+==> Delete the file excalibur.txt from desktop
+--> rm excalibur.txt
+
+2.
+==> Delete all the files and folders from a directory
+--> rm -r mydirectory
+
+3.
+==> Find all the .txt files in a folder
+--> find /home/fariha/Desktop/mydirectory -name "*.txt"
+
+
+4.
+==> Check for a given string in multiple files (N.B. Choose a random string of your choice)
+-->grep "im fariha yayy" /home/fariha/Desktop/mydirectory/*.txt
+
+
+5.
+==> Show only lines 12-18 of a .txt file
+--> sed -n '12,18p' excalibur.txt 
+
+
+6.
+==> Show all the files in a directory 
+--> ls -l

@@ -1,0 +1,19 @@
+package task01;
+
+public class Main {
+    public static void main(String args[]){
+        threadOne object00 = new threadOne(1, 10);
+        threadTwo object01 = new threadTwo(11, 20);
+        threadOne object02 = new threadOne(21, 30);
+        object00.start();
+        try{
+            object00.join();
+        }catch (Exception e){}
+        object01.start();
+        try{
+            object01.join();
+        }catch (Exception e){}
+        object02.start();
+
+    }
+}

@@ -1,0 +1,264 @@
+package task02;
+public class maxDivisor {
+    public static void main(String KGB[]){
+        int maxValue = -1, num = -1;
+
+        th01 o1 = new th01();
+        o1.start();
+        try{o1.join();}catch (Exception e){}
+        int arr01[] = o1.fnc();
+        if(arr01[0] > maxValue){maxValue = arr01[0]; num = arr01[1];}
+
+        th02 o2 = new th02();
+        o2.start();
+        try{o2.join();}catch (Exception e){}
+        int arr02[] = o2.fnc();
+        if(arr02[0] > maxValue){maxValue = arr02[0]; num = arr02[1];}
+
+        th03 o3 = new th03();
+        o3.start();
+        try{o3.join();}catch (Exception e){}
+        int arr03[] = o3.fnc();
+        if(arr03[0] > maxValue){maxValue = arr03[0]; num = arr03[1];}
+
+        th04 o4 = new th04();
+        o4.start();
+        try{o4.join();}catch (Exception e){}
+        int arr04[] = o4.fnc();
+        if(arr04[0] > maxValue){maxValue = arr04[0]; num = arr04[1];}
+
+        th05 o5 = new th05();
+        o5.start();
+        try{o5.join();}catch (Exception e){}
+        int arr05[] = o5.fnc();
+        if(arr05[0] > maxValue){maxValue = arr05[0]; num = arr05[1];}
+
+        th06 o6 = new th06();
+        o6.start();
+        try{o6.join();}catch (Exception e){}
+        int arr06[] = o6.fnc();
+        if(arr06[0] > maxValue){maxValue = arr06[0]; num = arr06[1];}
+
+        th07 o7 = new th07();
+        o7.start();
+        try{o7.join();}catch (Exception e){}
+        int arr07[] = o7.fnc();
+        if(arr07[0] > maxValue){maxValue = arr07[0]; num = arr07[1];}
+
+        th08 o8 = new th08();
+        o8.start();
+        try{o8.join();}catch (Exception e){}
+        int arr08[] = o1.fnc();
+        if(arr08[0] > maxValue){maxValue = arr08[0]; num = arr08[1];}
+
+        th09 o9 = new th09();
+        o9.start();
+        try{o9.join();}catch (Exception e){}
+        int arr09[] = o9.fnc();
+        if(arr09[0] > maxValue){maxValue = arr09[0]; num = arr09[1];}
+
+        th10 o10 = new th10();
+        o10.start();
+        try{o10.join();}catch (Exception e){}
+        int arr010[] = o10.fnc();
+        if(arr010[0] > maxValue){maxValue = arr010[0]; num = arr010[1];}
+
+        System.out.println("Integer with most divisor is : " +num);
+        System.out.println("Total divisor is : " +maxValue);
+        System.currentTimeMillis();
+        System.out.println(System.currentTimeMillis());
+
+        
+        
+    }
+}
+class th01 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 1; i < 10001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th02 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 10001; i < 20001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th03 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 20001; i < 30001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th04 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 30001; i < 40001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th05 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 40001; i < 50001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th06 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 50001; i < 60001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th07 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 60001; i < 70001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th08 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 70001; i < 80001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th09 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 80001; i < 90001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}
+class th10 extends Thread{
+    public static int numOfDiv = -1, num = 0;
+    public void run(){
+        for(int i = 90001; i < 100001; i++){
+            int sum = 0;
+            for(int j = 1; j < i + 1; j++){
+                if(i % j == 0) sum++;
+            }
+            if(sum > numOfDiv){
+                numOfDiv = sum;
+                num = i;
+            }
+        }
+    }
+    public int[] fnc(){
+        int arr[] = {numOfDiv, num};
+        return arr;
+    }
+}

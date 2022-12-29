@@ -1,0 +1,15 @@
+package task01;
+
+public class threadOne extends Thread{
+    public int st;
+    public int ed;
+    public threadOne(int a, int b){
+        this.st = a;
+        this.ed = b;
+    }
+    public void run(){
+        for(int i = st; i <= ed; i++){
+            System.out.println(i);
+        }
+    }
+}
